@@ -1,0 +1,22 @@
+
+<app-header></app-header>
+<div class="main columns background-no-repeat p-sm" [style.background-image]="background">
+  <div class="rows hugh br-sm mt-sm mb-sm ml-md">
+    <h2 class="heading-2 mt-xs mb-xs ml-xs mr-xs">Areas</h2>
+  </div>
+  <div class="w-100 columns">
+    <button mat-button class="content-button hugh shadow w-100" *ngFor="let area of areas" (click)="selectArea(area)">
+      <div class="rows grid-container">
+        <div class="title rows">
+          <h4 class="heading-3  mt-xs mb-xs capitalize">{{ area.name }}</h4>
+        </div>
+        <div class="description rows">
+          <p class="text-primary description mt-xs mb-xs">{{ area.description }}</p>
+        </div>
+        <div class="icon">
+          <mat-icon class="text-black">chevron_right</mat-icon>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
